@@ -1,0 +1,99 @@
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+*{
+	font-size: 0;
+}
+
+.ba-square-box{
+position: relative;
+max-width: 70vh;
+}
+
+.ba-square-content{
+position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+top: 0;
+border: 25px solid #ab420e;
+}
+
+.ba-square-box:before{
+content: "";
+display: block;
+padding-top: 100%;
+}
+
+main{
+	max-width: 70vh;
+	margin: 20px auto;
+}
+
+.series {
+	float: left;
+	width: 100%;
+	height: 12.5%;
+}
+
+.column{
+	float: left;
+	width: 12.5%;
+	height: 100%;
+	}
+
+
+
+.series:nth-child(odd) .column:nth-child(odd),
+.series:nth-child(even) .column:nth-child(even){
+	background: #dbbd6a;
+}
+
+.series:nth-child(odd) .column:nth-child(even),
+.series:nth-child(even) .column:nth-child(odd){
+	background: #915325;
+}
+
+.series:nth-child(1) .column:nth-child(even):before,
+.series:nth-child(2) .column:nth-child(odd):before,
+.series:nth-child(3) .column:nth-child(even):before{
+	content: "";
+	position: absolute;
+	background: #312f2f;
+	height: 10%;
+	width: 10%;
+	margin: 1.25%;
+	border-radius: 50%;
+	border:2px solid #cccaca;
+}
+
+.series:nth-child(6) .column:nth-child(odd):before,
+.series:nth-child(7) .column:nth-child(even):before,
+.series:nth-child(8) .column:nth-child(odd):before{
+	content: "";
+	position: absolute;
+	background: #cccaca;
+	height: 10%;
+	width: 10%;
+	margin: 1.25%;
+	border-radius: 50%;
+	border:2px solid #312f2f;
+}
+
+.series:nth-child(1) .column:nth-child(even):hover:before,
+.series:nth-child(2) .column:nth-child(odd):hover:before,
+.series:nth-child(3) .column:nth-child(even):hover:before,
+.series:nth-child(6) .column:nth-child(odd):hover:before,
+.series:nth-child(7) .column:nth-child(even):hover:before,
+.series:nth-child(8) .column:nth-child(odd):hover:before{
+	box-shadow: 2px 2px 5px black;
+	height: 10.5%;
+	width: 10.5%;
+	margin: 0.75%;
+}
+
